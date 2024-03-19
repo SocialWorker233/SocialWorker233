@@ -11,7 +11,6 @@ export default defineConfig({
     postcss,
   },
   plugins: [react()],
-  base: '/SocialWorker233.github.io',
   resolve: {
     alias: [
       {
