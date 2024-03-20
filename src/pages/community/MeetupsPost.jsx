@@ -1,33 +1,31 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import Sidebar from '../../partials/Sidebar';
-import Header from '../../partials/Header';
+import Sidebar from '../../partials/Sidebar'
+import Header from '../../partials/Header'
 
-import MeetupImage from '../../images/meetup-image.jpg';
-import MeetupPhoto01 from '../../images/meetup-photo-01.jpg';
-import MeetupPhoto02 from '../../images/meetup-photo-02.jpg';
-import MeetupPhoto03 from '../../images/meetup-photo-03.jpg';
-import MeetupThumb from '../../images/meetups-thumb-02.jpg';
-import UserImage01 from '../../images/user-32-01.jpg';
-import UserImage02 from '../../images/user-32-02.jpg';
-import UserImage03 from '../../images/user-32-03.jpg';
-import UserImage04 from '../../images/user-32-04.jpg';
-import UserImage05 from '../../images/user-32-05.jpg';
-import UserImage06 from '../../images/user-32-06.jpg';
-import UserImage07 from '../../images/user-32-07.jpg';
-import UserImage08 from '../../images/user-32-08.jpg';
-import Avatar02 from '../../images/avatar-02.jpg';
-import Avatar03 from '../../images/avatar-03.jpg';
-import Avatar04 from '../../images/avatar-04.jpg';
+import MeetupImage from '../../images/meetup-image.jpg'
+import MeetupPhoto01 from '../../images/meetup-photo-01.jpg'
+import MeetupPhoto02 from '../../images/meetup-photo-02.jpg'
+import MeetupPhoto03 from '../../images/meetup-photo-03.jpg'
+import MeetupThumb from '../../images/meetups-thumb-02.jpg'
+import UserImage01 from '../../images/user-32-01.jpg'
+import UserImage02 from '../../images/user-32-02.jpg'
+import UserImage03 from '../../images/user-32-03.jpg'
+import UserImage04 from '../../images/user-32-04.jpg'
+import UserImage05 from '../../images/user-32-05.jpg'
+import UserImage06 from '../../images/user-32-06.jpg'
+import UserImage07 from '../../images/user-32-07.jpg'
+import UserImage08 from '../../images/user-32-08.jpg'
+import Avatar02 from '../../images/avatar-02.jpg'
+import Avatar03 from '../../images/avatar-03.jpg'
+import Avatar04 from '../../images/avatar-04.jpg'
 
 function MeetupsPost() {
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <div className="flex h-[100dvh] overflow-hidden">
-      
       {/* Sidebar */}
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
@@ -43,18 +41,30 @@ function MeetupsPost() {
               {/* Content */}
               <div>
                 <div className="mb-6">
-                  <Link className="btn-sm px-3 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300" to="/community/meetups">
-                    <svg className="fill-current text-slate-400 dark:text-slate-500 mr-2" width="7" height="12" viewBox="0 0 7 12">
+                  <Link
+                    className="btn-sm px-3 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
+                    to="/community/meetups">
+                    <svg
+                      className="fill-current text-slate-400 dark:text-slate-500 mr-2"
+                      width="7"
+                      height="12"
+                      viewBox="0 0 7 12">
                       <path d="M5.4.6 6.8 2l-4 4 4 4-1.4 1.4L0 6z" />
                     </svg>
-                    <span>Back To Meetups</span>
+                    <span>回到社工风姿</span>
                   </Link>
                 </div>
-                <div className="text-sm font-semibold text-indigo-500 uppercase mb-2">Mon 27 Dec, 2021 - 9:00 PM -&gt; 10:00 PM</div>
+                <div className="text-sm font-semibold text-indigo-500 uppercase mb-2">
+                  2021年11月15日 - 上午 9:00
+                </div>
                 <header className="mb-4">
                   {/* Title */}
-                  <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-2">The World of AI and Machine Learning — Open Chat</h1>
-                  <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts.</p>
+                  <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    引领变革：社工在城市社区中的创新作用
+                  </h1>
+                  <p>
+                    在快速变化的社会背景下，社会工作者在引领和支持城市社区变革中扮演着至关重要的角色。他们不仅是危机应对的先锋，也是持续社会发展的驱动者。本文深入探讨了社工在城市社区发展中的创新实践和所面临的挑战。
+                  </p>
                 </header>
 
                 {/* Meta */}
@@ -62,65 +72,110 @@ function MeetupsPost() {
                   {/* Author */}
                   <div className="flex items-center sm:mr-4">
                     <a className="block mr-2 shrink-0" href="#0">
-                      <img className="rounded-full" src={UserImage07} width="32" height="32" alt="User 04" />
+                      <img
+                        className="rounded-full"
+                        src={UserImage07}
+                        width="32"
+                        height="32"
+                        alt="User 04"
+                      />
                     </a>
                     <div className="text-sm whitespace-nowrap">
-                      Hosted by{' '}
-                      <a className="font-semibold text-slate-800 dark:text-slate-100" href="#0">
-                        Monica Fishkin
-                      </a>
+                      由{' '}
+                      <a
+                        className="font-semibold text-slate-800 dark:text-slate-100"
+                        href="#0">
+                        翌宁宝宝
+                      </a>{' '}
+                      发布
                     </div>
                   </div>
                   {/* Right side */}
                   <div className="flex flex-wrap items-center sm:justify-end space-x-2">
                     {/* Tags */}
-                    <div className="text-xs inline-flex items-center font-medium bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded-full text-center px-2.5 py-1">
-                      <svg className="w-4 h-3 fill-slate-400 dark:fill-slate-500 mr-2" viewBox="0 0 16 12">
-                        <path d="m16 2-4 2.4V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7.6l4 2.4V2ZM2 10V2h8v8H2Z" />
-                      </svg>
-                      <span>Online Event</span>
-                    </div>
                     <div className="text-xs inline-flex font-medium uppercase bg-emerald-100 dark:bg-emerald-400/30 text-emerald-600 dark:text-emerald-400 rounded-full text-center px-2.5 py-1">
-                      Free
+                      热度高
                     </div>
                   </div>
                 </div>
 
                 {/* Image */}
                 <figure className="mb-6">
-                  <img className="w-full rounded-sm" src={MeetupImage} width="640" height="360" alt="Meetup" />
+                  <img
+                    className="w-full rounded-sm"
+                    src={MeetupImage}
+                    width="640"
+                    height="360"
+                    alt="Meetup"
+                  />
                 </figure>
 
                 {/* Post content */}
                 <div>
-                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">Meetup Details</h2>
-                  <p className="mb-6">In the world of AI, behavioural predictions are leading the charge to better machine learning.</p>
+                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    创新实践
+                  </h2>
                   <p className="mb-6">
-                    There is so much happening in the AI space. Advances in the economic sectors have seen automated business practices rapidly
-                    increasing economic value. While the realm of the human sciences has used the power afforded by computational capabilities to
-                    solve many human based dilemmas. Even the art scene has adopted carefully selected ML applications to usher in the technological
-                    movement.
+                    在北京的一项社区支持项目中，社工团队通过建立线上互助平台，成功地将社区居民的需求与资源对接。该平台不仅为有困难的居民提供即时帮助，也为寻求志愿服务机会的人提供了平台。这一创新做法极大地提升了社区的凝聚力和自助能力。
                   </p>
                   <p className="mb-6">
-                    Join us every second Wednesday as we host an open discussion about the amazing things happening in the world of AI and machine
-                    learning. Feel free to share your experiences, ask questions, ponder the possibilities, or just listen as we explore new topics
-                    and revisit old ones.
+                    另一个例子来自上海，一支社工队伍针对老年人孤独问题，开发了一款智能交友应用。该应用不仅使老年人能够找到兴趣相投的朋友，还通过定期组织活动促进了他们的社会参与。
+                  </p>
+                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    面临的挑战
+                  </h2>
+                  <p className="mb-6">
+                    尽管社工在城市社区发展中发挥着重要作用，但他们也面临着多重挑战。资源的有限性是一个长期存在的问题。许多社会服务项目因资金不足而难以持续。此外，社会工作者在执行创新项目时，往往需要跨越多个部门和机构之间的壁垒，这需要强大的协调能力和政策支持。
+                  </p>
+
+                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    引领变革的力量
+                  </h2>
+                  <p className="mb-6">
+                    社工通过直接与社区成员互动，能够准确地把握社区的需求和挑战，并设计出具有针对性的解决方案。例如，在深圳，一个专注于青少年发展的社工项目通过提供职业指导和心理支持，帮助了许多处于困境中的年轻人找到了自我价值和发展方向。
+                  </p>
+
+                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    展望未来
+                  </h2>
+                  <p className="mb-6">
+                    未来，社工在城市社区中的作用将会更加重要。随着社会问题的复杂化，社会工作者需要不断提升自身的专业能力，利用科技手段创新服务模式，以更有效地应对挑战。同时，社会各界也应加大对社会工作的支持和投资，共同构建更加和谐、可持续发展的社区。
                   </p>
                 </div>
                 <hr className="my-6 border-t border-slate-200 dark:border-slate-700" />
 
                 {/* Photos */}
                 <div>
-                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">Photos (3)</h2>
+                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    活动照片 (3)
+                  </h2>
                   <div className="grid grid-cols-3 gap-4 my-6">
                     <a className="block" href="#0">
-                      <img className="w-full rounded-sm" src={MeetupPhoto01} width="203" height="152" alt="Meetup photo 01" />
+                      <img
+                        className="w-full rounded-sm"
+                        src={MeetupPhoto01}
+                        width="203"
+                        height="152"
+                        alt="Meetup photo 01"
+                      />
                     </a>
                     <a className="block" href="#0">
-                      <img className="w-full rounded-sm" src={MeetupPhoto02} width="203" height="152" alt="Meetup photo 02" />
+                      <img
+                        className="w-full rounded-sm"
+                        src={MeetupPhoto02}
+                        width="203"
+                        height="152"
+                        alt="Meetup photo 02"
+                      />
                     </a>
                     <a className="block" href="#0">
-                      <img className="w-full rounded-sm" src={MeetupPhoto03} width="203" height="152" alt="Meetup photo 03" />
+                      <img
+                        className="w-full rounded-sm"
+                        src={MeetupPhoto03}
+                        width="203"
+                        height="152"
+                        alt="Meetup photo 03"
+                      />
                     </a>
                   </div>
                 </div>
@@ -129,44 +184,67 @@ function MeetupsPost() {
 
                 {/* Comments */}
                 <div>
-                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">Comments (3)</h2>
+                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">
+                    评论区 (3)
+                  </h2>
                   <ul className="space-y-5 my-6">
                     {/* Comment */}
                     <li className="flex items-start">
                       <a className="block mr-3 shrink-0" href="#0">
-                        <img className="rounded-full" src={UserImage07} width="32" height="32" alt="User 07" />
+                        <img
+                          className="rounded-full"
+                          src={UserImage07}
+                          width="32"
+                          height="32"
+                          alt="User 07"
+                        />
                       </a>
                       <div className="grow">
-                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">Taylor Nieman</div>
+                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                          李明
+                        </div>
                         <div className="italic">
-                          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                          Ut enim ad minim veniam.”
+                          参加了这次活动真的让我眼界大开，社会工作者的辛勤工作和他们对社区改善的深刻影响让我深受感动。我特别钦佩他们在面对资源限制和跨部门合作时所展现出的创新能力和毅力。
                         </div>
                       </div>
                     </li>
                     {/* Comment */}
                     <li className="flex items-start">
                       <a className="block mr-3 shrink-0" href="#0">
-                        <img className="rounded-full" src={UserImage08} width="32" height="32" alt="User 08" />
+                        <img
+                          className="rounded-full"
+                          src={UserImage08}
+                          width="32"
+                          height="32"
+                          alt="User 08"
+                        />
                       </a>
                       <div className="grow">
-                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">Meagan Loyst</div>
+                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                          张红
+                        </div>
                         <div className="italic">
-                          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                          Ut enim ad minim veniam.”
+                          这篇报道非常精彩，它不仅展示了社工在城市社区发展中的关键作用，还突出了他们如何利用科技和创新思维来解决社会问题。作为一名志愿者，我从中获得了很多灵感，希望将来能参与到这样的项目中去。
                         </div>
                       </div>
                     </li>
                     {/* Comment */}
                     <li className="flex items-start">
                       <a className="block mr-3 shrink-0" href="#0">
-                        <img className="rounded-full" src={UserImage02} width="32" height="32" alt="User 02" />
+                        <img
+                          className="rounded-full"
+                          src={UserImage02}
+                          width="32"
+                          height="32"
+                          alt="User 02"
+                        />
                       </a>
                       <div className="grow">
-                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">Frank Malik</div>
+                        <div className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                          王亮
+                        </div>
                         <div className="italic">
-                          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                          Ut enim ad minim veniam.”
+                          报道很详尽地介绍了社工面临的挑战和他们如何勇敢面对，为社区带来积极的变化。这让我意识到，每个人都有能力为社会做出贡献，只要我们愿意伸出援手。希望有更多这样的报道，让大众了解社工的重要性。
                         </div>
                       </div>
                     </li>
@@ -174,66 +252,6 @@ function MeetupsPost() {
                 </div>
 
                 <hr className="my-6 border-t border-slate-200 dark:border-slate-700" />
-
-                {/* Similar Meetups */}
-                <div>
-                  <h2 className="text-xl leading-snug text-slate-800 dark:text-slate-100 font-bold mb-2">Similar Meetups</h2>
-                  <div className="space-y-8 sm:space-y-5 my-6 lg:mb-0">
-                    {/* Related item */}
-                    <article className="flex bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
-                      {/* Image */}
-                      <a className="relative block w-24 sm:w-56 lg:sidebar-expanded:w-20 xl:sidebar-expanded:w-56 shrink-0" href="#0">
-                        <img
-                          className="absolute object-cover object-center w-full h-full"
-                          src={MeetupThumb}
-                          width="220"
-                          height="236"
-                          alt="Meetup 02"
-                        />
-                        {/* Like button */}
-                        <button className="absolute top-0 right-0 mt-4 mr-4">
-                          <div className="text-slate-100 bg-slate-900 bg-opacity-60 rounded-full">
-                            <span className="sr-only">Like</span>
-                            <svg className="h-8 w-8 fill-current" viewBox="0 0 32 32">
-                              <path d="M22.682 11.318A4.485 4.485 0 0019.5 10a4.377 4.377 0 00-3.5 1.707A4.383 4.383 0 0012.5 10a4.5 4.5 0 00-3.182 7.682L16 24l6.682-6.318a4.5 4.5 0 000-6.364zm-1.4 4.933L16 21.247l-5.285-5A2.5 2.5 0 0112.5 12c1.437 0 2.312.681 3.5 2.625C17.187 12.681 18.062 12 19.5 12a2.5 2.5 0 011.785 4.251h-.003z" />
-                            </svg>
-                          </div>
-                        </button>
-                      </a>
-                      {/* Content */}
-                      <div className="grow p-5 flex flex-col">
-                        <div className='grow'>
-                          <div className="text-sm font-semibold text-indigo-500 uppercase mb-2">Mon 27 Dec, 2021</div>
-                          <a className="inline-flex mb-2" href="#0">
-                            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">New York &amp; New Jersey Virtual Retreat 2021</h3>
-                          </a>
-                          <div className="text-sm">
-                            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts.
-                          </div>
-                        </div>
-                        {/* Footer */}
-                        <div className="flex justify-between mt-3">
-                          {/* Tag */}
-                          <div className="text-xs inline-flex items-center font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded-full text-center px-2.5 py-1">
-                            <svg className="w-4 h-3 fill-slate-400 dark:fill-slate-500 mr-2" viewBox="0 0 16 12">
-                              <path d="m16 2-4 2.4V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7.6l4 2.4V2ZM2 10V2h8v8H2Z" />
-                            </svg>
-                            <span>Online Event</span>
-                          </div>
-                          {/* Avatars */}
-                          <div className="flex items-center space-x-2">
-                            <div className="flex -space-x-3 -ml-0.5">
-                              <img className="rounded-full border-2 border-white dark:border-slate-800 box-content" src={Avatar02} width="28" height="28" alt="User 02" />
-                              <img className="rounded-full border-2 border-white dark:border-slate-800 box-content" src={Avatar03} width="28" height="28" alt="User 03" />
-                              <img className="rounded-full border-2 border-white dark:border-slate-800 box-content" src={Avatar04} width="28" height="28" alt="User 04" />
-                            </div>
-                            <div className="text-xs font-medium text-slate-400 dark:text-slate-500 italic">+132</div>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
               </div>
 
               {/* Sidebar */}
@@ -242,16 +260,20 @@ function MeetupsPost() {
                 <div className="bg-white dark:bg-slate-800 p-5 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700 lg:w-72 xl:w-80">
                   <div className="space-y-2">
                     <button className="btn w-full bg-indigo-500 hover:bg-indigo-600 text-white">
-                      <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
+                      <svg
+                        className="w-4 h-4 fill-current shrink-0"
+                        viewBox="0 0 16 16">
                         <path d="m2.457 8.516.969-.99 2.516 2.481 5.324-5.304.985.989-6.309 6.284z" />
                       </svg>
-                      <span className="ml-1">Attending</span>
+                      <span className="ml-1">参加</span>
                     </button>
                     <button className="btn w-full dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300">
-                      <svg className="w-4 h-4 fill-rose-500 shrink-0" viewBox="0 0 16 16">
+                      <svg
+                        className="w-4 h-4 fill-rose-500 shrink-0"
+                        viewBox="0 0 16 16">
                         <path d="M14.682 2.318A4.485 4.485 0 0 0 11.5 1 4.377 4.377 0 0 0 8 2.707 4.383 4.383 0 0 0 4.5 1a4.5 4.5 0 0 0-3.182 7.682L8 15l6.682-6.318a4.5 4.5 0 0 0 0-6.364Zm-1.4 4.933L8 12.247l-5.285-5A2.5 2.5 0 0 1 4.5 3c1.437 0 2.312.681 3.5 2.625C9.187 3.681 10.062 3 11.5 3a2.5 2.5 0 0 1 1.785 4.251h-.003Z" />
                       </svg>
-                      <span className="ml-2">Favorite</span>
+                      <span className="ml-2">收藏</span>
                     </button>
                   </div>
                 </div>
@@ -259,9 +281,13 @@ function MeetupsPost() {
                 {/* 2nd block */}
                 <div className="bg-white dark:bg-slate-800 p-5 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700 lg:w-72 xl:w-80">
                   <div className="flex justify-between space-x-1 mb-5">
-                    <div className="text-sm text-slate-800 dark:text-slate-100 font-semibold">Attendees (127)</div>
-                    <a className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400" href="#0">
-                      View All
+                    <div className="text-sm text-slate-800 dark:text-slate-100 font-semibold">
+                      参与人员 (127)
+                    </div>
+                    <a
+                      className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
+                      href="#0">
+                      查看所有
                     </a>
                   </div>
                   <ul className="space-y-3">
@@ -269,15 +295,25 @@ function MeetupsPost() {
                       <div className="flex justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage08} width="32" height="32" alt="User 08" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage08}
+                              width="32"
+                              height="32"
+                              alt="User 08"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Carolyn McNeail</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              张三
+                            </span>
                           </div>
                         </div>
                         <button className="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 rounded-full">
                           <span className="sr-only">Menu</span>
-                          <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                          <svg
+                            className="w-8 h-8 fill-current"
+                            viewBox="0 0 32 32">
                             <circle cx="16" cy="16" r="2" />
                             <circle cx="10" cy="16" r="2" />
                             <circle cx="22" cy="16" r="2" />
@@ -289,15 +325,25 @@ function MeetupsPost() {
                       <div className="flex justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage01} width="32" height="32" alt="User 01" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage01}
+                              width="32"
+                              height="32"
+                              alt="User 01"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Dominik Lamakani</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              李四
+                            </span>
                           </div>
                         </div>
                         <button className="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 rounded-full">
                           <span className="sr-only">Menu</span>
-                          <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                          <svg
+                            className="w-8 h-8 fill-current"
+                            viewBox="0 0 32 32">
                             <circle cx="16" cy="16" r="2" />
                             <circle cx="10" cy="16" r="2" />
                             <circle cx="22" cy="16" r="2" />
@@ -309,15 +355,25 @@ function MeetupsPost() {
                       <div className="flex justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage03} width="32" height="32" alt="User 03" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage03}
+                              width="32"
+                              height="32"
+                              alt="User 03"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Ivan Mesaros</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              王五
+                            </span>
                           </div>
                         </div>
                         <button className="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 rounded-full">
                           <span className="sr-only">Menu</span>
-                          <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                          <svg
+                            className="w-8 h-8 fill-current"
+                            viewBox="0 0 32 32">
                             <circle cx="16" cy="16" r="2" />
                             <circle cx="10" cy="16" r="2" />
                             <circle cx="22" cy="16" r="2" />
@@ -329,15 +385,25 @@ function MeetupsPost() {
                       <div className="flex justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage05} width="32" height="32" alt="User 05" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage05}
+                              width="32"
+                              height="32"
+                              alt="User 05"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Maria Martinez</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              赵六
+                            </span>
                           </div>
                         </div>
                         <button className="text-slate-400 hover:text-slate-500 dark:text-slate-500 dark:hover:text-slate-400 rounded-full">
                           <span className="sr-only">Menu</span>
-                          <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32">
+                          <svg
+                            className="w-8 h-8 fill-current"
+                            viewBox="0 0 32 32">
                             <circle cx="16" cy="16" r="2" />
                             <circle cx="10" cy="16" r="2" />
                             <circle cx="22" cy="16" r="2" />
@@ -351,9 +417,13 @@ function MeetupsPost() {
                 {/* 3rd block */}
                 <div className="bg-white dark:bg-slate-800 p-5 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700 lg:w-72 xl:w-80">
                   <div className="flex justify-between space-x-1 mb-5">
-                    <div className="text-sm text-slate-800 dark:text-slate-100 font-semibold">Invite Friends</div>
-                    <a className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400" href="#0">
-                      View All
+                    <div className="text-sm text-slate-800 dark:text-slate-100 font-semibold">
+                      邀请朋友
+                    </div>
+                    <a
+                      className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
+                      href="#0">
+                      查看所有
                     </a>
                   </div>
                   <ul className="space-y-3">
@@ -361,14 +431,22 @@ function MeetupsPost() {
                       <div className="flex items-center justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage02} width="32" height="32" alt="User 02" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage02}
+                              width="32"
+                              height="32"
+                              alt="User 02"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Haruki Masuno</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              张三三
+                            </span>
                           </div>
                         </div>
                         <button className="text-xs inline-flex font-medium bg-indigo-100 dark:bg-indigo-500/30 text-indigo-600 dark:text-indigo-400 rounded-full text-center px-2.5 py-1">
-                          Invite
+                          邀请
                         </button>
                       </div>
                     </li>
@@ -376,14 +454,22 @@ function MeetupsPost() {
                       <div className="flex items-center justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage04} width="32" height="32" alt="User 04" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage04}
+                              width="32"
+                              height="32"
+                              alt="User 04"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Joe Huang</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              李四四
+                            </span>
                           </div>
                         </div>
                         <button className="text-xs inline-flex font-medium bg-indigo-100 dark:bg-indigo-500/30 text-indigo-600 dark:text-indigo-400 rounded-full text-center px-2.5 py-1">
-                          Invite
+                          邀请
                         </button>
                       </div>
                     </li>
@@ -391,14 +477,22 @@ function MeetupsPost() {
                       <div className="flex items-center justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage06} width="32" height="32" alt="User 06" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage06}
+                              width="32"
+                              height="32"
+                              alt="User 06"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Carolyn McNeail</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              王五五
+                            </span>
                           </div>
                         </div>
                         <button className="text-xs inline-flex font-medium bg-indigo-100 dark:bg-indigo-500/30 text-indigo-600 dark:text-indigo-400 rounded-full text-center px-2.5 py-1">
-                          Invite
+                          邀请
                         </button>
                       </div>
                     </li>
@@ -406,14 +500,22 @@ function MeetupsPost() {
                       <div className="flex items-center justify-between">
                         <div className="grow flex items-center">
                           <div className="relative mr-3">
-                            <img className="w-8 h-8 rounded-full" src={UserImage08} width="32" height="32" alt="User 08" />
+                            <img
+                              className="w-8 h-8 rounded-full"
+                              src={UserImage08}
+                              width="32"
+                              height="32"
+                              alt="User 08"
+                            />
                           </div>
                           <div className="truncate">
-                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">Lisa Sitwala</span>
+                            <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
+                              赵六六
+                            </span>
                           </div>
                         </div>
                         <button className="text-xs inline-flex font-medium bg-indigo-100 dark:bg-indigo-500/30 text-indigo-600 dark:text-indigo-400 rounded-full text-center px-2.5 py-1">
-                          Invite
+                          邀请
                         </button>
                       </div>
                     </li>
@@ -425,7 +527,7 @@ function MeetupsPost() {
         </main>
       </div>
     </div>
-  );
+  )
 }
 
-export default MeetupsPost;
+export default MeetupsPost

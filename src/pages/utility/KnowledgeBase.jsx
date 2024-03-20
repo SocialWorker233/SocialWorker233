@@ -7,6 +7,14 @@ import ModalBasic from '../../components/ModalBasic'
 function KnowledgeBase() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [feedbackModalOpen, setFeedbackModalOpen] = useState(false)
+  const [feedbackModalOpen0, setFeedbackModalOpen0] = useState(false)
+  const [feedbackModalOpen1, setFeedbackModalOpen1] = useState(false)
+  const [feedbackModalOpen2, setFeedbackModalOpen2] = useState(false)
+  const [feedbackModalOpen3, setFeedbackModalOpen3] = useState(false)
+  const [feedbackModalOpen4, setFeedbackModalOpen4] = useState(false)
+  const [feedbackModalOpen5, setFeedbackModalOpen5] = useState(false)
+  const [feedbackModalOpen6, setFeedbackModalOpen6] = useState(false)
+  const [feedbackModalOpen7, setFeedbackModalOpen7] = useState(false)
 
   return (
     <div className="flex h-[100dvh] overflow-hidden">
@@ -83,7 +91,7 @@ function KnowledgeBase() {
             <div className="relative w-full max-w-2xl mx-auto text-center">
               <div className="mb-5">
                 <h1 className="text-2xl md:text-3xl text-white font-bold">
-                  👋 What Can We Help You Find?
+                  👋 我们能帮您什么？
                 </h1>
               </div>
               <form className="relative">
@@ -120,7 +128,7 @@ function KnowledgeBase() {
               <div>
                 <div className="mb-5">
                   <h2 className="text-xl text-slate-800 dark:text-slate-100 font-bold">
-                    Popular Topics
+                    服务预约
                   </h2>
                 </div>
                 {/* Grid */}
@@ -162,11 +170,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          Getting Started
+                          社工园丁志愿
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          让每一份热心找到归属，通过在线报名参与丰富多彩的志愿活动。
                         </div>
                       </div>
                       {/* Link */}
@@ -177,28 +184,23 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen0(true)
                           }}>
-                          Send Feedback
+                          报名参加
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen0}
+                          setModalOpen={setFeedbackModalOpen0}
+                          title="填写信息">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  姓名 <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -211,7 +213,8 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  联系电话{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -223,15 +226,30 @@ function KnowledgeBase() {
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
-                                  htmlFor="feedback">
-                                  Message{' '}
+                                  htmlFor="email">
+                                  志愿活动名称{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
-                                <textarea
-                                  id="feedback"
-                                  className="form-textarea w-full px-2 py-1"
-                                  rows="4"
-                                  required></textarea>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  志愿活动组织{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
                               </div>
                             </div>
                           </div>
@@ -242,12 +260,12 @@ function KnowledgeBase() {
                                 className="btn-sm border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
                                 onClick={(e) => {
                                   e.stopPropagation()
-                                  setFeedbackModalOpen(false)
+                                  setFeedbackModalOpen0(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                提交
                               </button>
                             </div>
                           </div>
@@ -293,11 +311,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          In-app Messaging
+                          未保办服务预约
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          一键预约求助、儿童之家服务及捐赠对接，快速响应，贴心服务。
                         </div>
                       </div>
                       {/* Link */}
@@ -308,28 +325,23 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen1(true)
                           }}>
-                          Send Feedback
+                          预约
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen1}
+                          setModalOpen={setFeedbackModalOpen1}
+                          title="信息填写">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  姓名<span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -342,7 +354,22 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  电子邮件{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  联系电话{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -355,7 +382,7 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="feedback">
-                                  Message{' '}
+                                  服务信息详情{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
                                 <textarea
@@ -375,10 +402,10 @@ function KnowledgeBase() {
                                   e.stopPropagation()
                                   setFeedbackModalOpen(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -441,11 +468,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          Apps &amp; Tools
+                          未保档案
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          为每个未成年人打造安全档案，记录成长每一步，仅授权人士可访问。
                         </div>
                       </div>
                       {/* Link */}
@@ -456,28 +482,24 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen2(true)
                           }}>
-                          Send Feedback
+                          填写档案
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen2}
+                          setModalOpen={setFeedbackModalOpen2}
+                          title="信息填写">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  未成年人姓名{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -490,7 +512,8 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  监护人姓名{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -502,15 +525,30 @@ function KnowledgeBase() {
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
-                                  htmlFor="feedback">
-                                  Message{' '}
+                                  htmlFor="email">
+                                  监护人联系电话{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
-                                <textarea
-                                  id="feedback"
-                                  className="form-textarea w-full px-2 py-1"
-                                  rows="4"
-                                  required></textarea>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  走访日期{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
                               </div>
                             </div>
                           </div>
@@ -521,12 +559,12 @@ function KnowledgeBase() {
                                 className="btn-sm border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
                                 onClick={(e) => {
                                   e.stopPropagation()
-                                  setFeedbackModalOpen(false)
+                                  setFeedbackModalOpen2(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -578,11 +616,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          Billing &amp; Invoices
+                          流动社工站
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          线上提交申请，便捷获得社工服务，无缝连接社区、学校与监护人。
                         </div>
                       </div>
                       {/* Link */}
@@ -593,28 +630,24 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen3(true)
                           }}>
-                          Send Feedback
+                          申请
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen3}
+                          setModalOpen={setFeedbackModalOpen3}
+                          title="信息填写">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  申请人姓名{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -627,7 +660,8 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  电子邮件{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -639,15 +673,30 @@ function KnowledgeBase() {
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
-                                  htmlFor="feedback">
-                                  Message{' '}
+                                  htmlFor="email">
+                                  联系电话
                                   <span className="text-rose-500">*</span>
                                 </label>
-                                <textarea
-                                  id="feedback"
-                                  className="form-textarea w-full px-2 py-1"
-                                  rows="4"
-                                  required></textarea>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  申请服务类型{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
                               </div>
                             </div>
                           </div>
@@ -658,12 +707,12 @@ function KnowledgeBase() {
                                 className="btn-sm border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
                                 onClick={(e) => {
                                   e.stopPropagation()
-                                  setFeedbackModalOpen(false)
+                                  setFeedbackModalOpen3(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -710,11 +759,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          Support
+                          小信箱
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          建立桥梁，倾听您的声音，收集每一个建议与问题，共同改进我们的服务。
                         </div>
                       </div>
                       {/* Link */}
@@ -725,28 +773,23 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen4(true)
                           }}>
-                          Send Feedback
+                          写信
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen4}
+                          setModalOpen={setFeedbackModalOpen4}
+                          title="填写信息">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  姓名 <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -759,7 +802,22 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  电子邮件{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  反馈类型（建议/问题）{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -772,7 +830,7 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="feedback">
-                                  Message{' '}
+                                  反馈内容{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
                                 <textarea
@@ -790,12 +848,12 @@ function KnowledgeBase() {
                                 className="btn-sm border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
                                 onClick={(e) => {
                                   e.stopPropagation()
-                                  setFeedbackModalOpen(false)
+                                  setFeedbackModalOpen4(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -847,11 +905,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          Multimedia / Files
+                          个人心理咨询
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          一对一心理健康支持和咨询，助您走出困境，恢复内心的平和与力量。
                         </div>
                       </div>
                       {/* Link */}
@@ -862,28 +919,23 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen5(true)
                           }}>
-                          Send Feedback
+                          填写表单
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen5}
+                          setModalOpen={setFeedbackModalOpen5}
+                          title="填写信息">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  姓名 <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -896,7 +948,36 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  电子邮件{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  联系电话{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  咨询主题{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -909,7 +990,7 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="feedback">
-                                  Message{' '}
+                                  咨询内容{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
                                 <textarea
@@ -927,12 +1008,12 @@ function KnowledgeBase() {
                                 className="btn-sm border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
                                 onClick={(e) => {
                                   e.stopPropagation()
-                                  setFeedbackModalOpen(false)
+                                  setFeedbackModalOpen5(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -989,11 +1070,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          App Rewards
+                          紧急援助服务
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          遭遇突发事件？我们提供紧急援助，支持您和您的家庭度过难关。
                         </div>
                       </div>
                       {/* Link */}
@@ -1004,28 +1084,23 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen6(true)
                           }}>
-                          Send Feedback
+                          请求救援
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen6}
+                          setModalOpen={setFeedbackModalOpen6}
+                          title="信息填写">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  姓名<span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -1038,7 +1113,8 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  联系电话{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -1051,7 +1127,7 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="feedback">
-                                  Message{' '}
+                                  紧急情况描述{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
                                 <textarea
@@ -1069,12 +1145,12 @@ function KnowledgeBase() {
                                 className="btn-sm border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300"
                                 onClick={(e) => {
                                   e.stopPropagation()
-                                  setFeedbackModalOpen(false)
+                                  setFeedbackModalOpen5(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -1120,11 +1196,10 @@ function KnowledgeBase() {
                         </div>
                         {/* Content */}
                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                          Contact Us
+                          社区活动和志愿服务
                         </h3>
                         <div className="text-sm">
-                          Lorem ipsum dolor sit consectetur adipiscing elit sed
-                          do.
+                          加入我们的社区服务和志愿活动，一起为社区带来正能量和变化。
                         </div>
                       </div>
                       {/* Link */}
@@ -1135,28 +1210,23 @@ function KnowledgeBase() {
                           aria-controls="feedback-modal"
                           onClick={(e) => {
                             e.stopPropagation()
-                            setFeedbackModalOpen(true)
+                            setFeedbackModalOpen7(true)
                           }}>
-                          Send Feedback
+                          参加活动
                         </button>
                         <ModalBasic
                           id="feedback-modal"
-                          modalOpen={feedbackModalOpen}
-                          setModalOpen={setFeedbackModalOpen}
-                          title="Send Feedback">
+                          modalOpen={feedbackModalOpen7}
+                          setModalOpen={setFeedbackModalOpen7}
+                          title="信息填写">
                           {/* Modal content */}
                           <div className="px-5 py-4">
-                            <div className="text-sm">
-                              <div className="font-medium text-slate-800 dark:text-slate-100 mb-3">
-                                Let us know what you think 🙌
-                              </div>
-                            </div>
                             <div className="space-y-3">
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="name">
-                                  Name <span className="text-rose-500">*</span>
+                                  姓名 <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="name"
@@ -1169,7 +1239,8 @@ function KnowledgeBase() {
                                 <label
                                   className="block text-sm font-medium mb-1"
                                   htmlFor="email">
-                                  Email <span className="text-rose-500">*</span>
+                                  电子邮件{' '}
+                                  <span className="text-rose-500">*</span>
                                 </label>
                                 <input
                                   id="email"
@@ -1181,15 +1252,30 @@ function KnowledgeBase() {
                               <div>
                                 <label
                                   className="block text-sm font-medium mb-1"
-                                  htmlFor="feedback">
-                                  Message{' '}
+                                  htmlFor="email">
+                                  联系电话{' '}
                                   <span className="text-rose-500">*</span>
                                 </label>
-                                <textarea
-                                  id="feedback"
-                                  className="form-textarea w-full px-2 py-1"
-                                  rows="4"
-                                  required></textarea>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
+                              </div>
+                              <div>
+                                <label
+                                  className="block text-sm font-medium mb-1"
+                                  htmlFor="email">
+                                  感兴趣的活动类型{' '}
+                                  <span className="text-rose-500">*</span>
+                                </label>
+                                <input
+                                  id="email"
+                                  className="form-input w-full px-2 py-1"
+                                  type="email"
+                                  required
+                                />
                               </div>
                             </div>
                           </div>
@@ -1202,10 +1288,10 @@ function KnowledgeBase() {
                                   e.stopPropagation()
                                   setFeedbackModalOpen(false)
                                 }}>
-                                Cancel
+                                取消
                               </button>
                               <button className="btn-sm bg-indigo-500 hover:bg-indigo-600 text-white">
-                                Send
+                                发送
                               </button>
                             </div>
                           </div>
@@ -1221,7 +1307,7 @@ function KnowledgeBase() {
               <div>
                 <div className="mb-5">
                   <h2 className="text-xl text-slate-800 dark:text-slate-100 font-bold">
-                    Popular Guides
+                    热门指南
                   </h2>
                 </div>
                 {/* Grid */}
@@ -1239,12 +1325,10 @@ function KnowledgeBase() {
                         {/* Content */}
                         <div className="grow mb-2">
                           <div className="font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                            Documents For Business Verification
+                            社工服务利用指南
                           </div>
                           <div className="text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore.
+                            提供详细指南，帮助用户了解如何有效利用社工服务。
                           </div>
                         </div>
                         {/* Link */}
@@ -1252,7 +1336,7 @@ function KnowledgeBase() {
                           <a
                             className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
                             href="#0">
-                            View -&gt;
+                            查看 -&gt;
                           </a>
                         </div>
                       </div>
@@ -1272,12 +1356,10 @@ function KnowledgeBase() {
                         {/* Content */}
                         <div className="grow mb-2">
                           <div className="font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                            Delayed Or Missing Payouts
+                            社区资源汇总
                           </div>
                           <div className="text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore.
+                            汇总本地社区资源，包括紧急避难所、免费餐饮服务等。
                           </div>
                         </div>
                         {/* Link */}
@@ -1285,7 +1367,7 @@ function KnowledgeBase() {
                           <a
                             className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
                             href="#0">
-                            View -&gt;
+                            查看 -&gt;
                           </a>
                         </div>
                       </div>
@@ -1305,12 +1387,10 @@ function KnowledgeBase() {
                         {/* Content */}
                         <div className="grow mb-2">
                           <div className="font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                            Update Existing Bank Account Information
+                            子女保护与福利
                           </div>
                           <div className="text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore.
+                            提供关于子女保护政策、福利项目的信息，帮助家庭确保儿童安全和福祉。
                           </div>
                         </div>
                         {/* Link */}
@@ -1318,7 +1398,7 @@ function KnowledgeBase() {
                           <a
                             className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
                             href="#0">
-                            View -&gt;
+                            查看 -&gt;
                           </a>
                         </div>
                       </div>
@@ -1338,12 +1418,10 @@ function KnowledgeBase() {
                         {/* Content */}
                         <div className="grow mb-2">
                           <div className="font-semibold text-slate-800 dark:text-slate-100 mb-1">
-                            Close A Mosaic Account
+                            精神健康自助资源
                           </div>
                           <div className="text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            sed do eiusmod tempor incididunt ut labore et
-                            dolore.
+                            提供精神健康自我评估工具和自我帮助策略，帮助用户管理日常压力。
                           </div>
                         </div>
                         {/* Link */}
@@ -1351,7 +1429,7 @@ function KnowledgeBase() {
                           <a
                             className="text-sm font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
                             href="#0">
-                            View -&gt;
+                            查看 -&gt;
                           </a>
                         </div>
                       </div>

@@ -84,14 +84,13 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Feed />} />
+        <Route exact path="/" element={<Shop />} />
         {/* <Route path="/community/feed" element={<Feed />} /> */}
         <Route path="/dashboard/analytics" element={<Analytics />} />
         <Route path="/dashboard/fintech" element={<Fintech />} />
         <Route path="/ecommerce/customers" element={<Customers />} />
         <Route path="/ecommerce/orders" element={<Orders />} />
         <Route path="/ecommerce/invoices" element={<Invoices />} />
-        <Route path="/ecommerce/shop" element={<Shop />} />
         <Route path="/ecommerce/shop-2" element={<Shop2 />} />
         <Route path="/ecommerce/product" element={<Product />} />
         <Route path="/ecommerce/cart" element={<Cart />} />
