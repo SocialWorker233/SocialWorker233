@@ -1,26 +1,42 @@
-# Mosaic React
+## 需求分析
 
-React landing page template designed by Cruip.
+### 1. 登陆/注册页面
+- **功能**：支持不同角色（游客、社工个人、社工机构、政府管理人员、监护人、学校教师及行政人员）的登录和注册。
+- **特别注意**：需要设计不同的注册流程和信息输入框，以适应不同用户角色的特点。
 
-## Project setup
-```
-npm install
-```
+### 2. 社工园丁大事记（新闻版面）
+- **功能**：展示社工相关的新闻、活动更新和大事记。
+- **用户互动**：可能包含评论、分享功能。
 
-### Compiles and hot-reloads for development
-```
-npm run dev
-```
+### 3. 社工园丁志愿（志愿活动报名）
+- **功能**：展示即将进行的志愿活动，包括活动详情、报名方式等。
+- **用户操作**：用户可以直接在平台上报名参加志愿活动。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 4. 社工园丁风姿（社工个人资料/事迹展示）
+- **功能**：展示社工个人的资料和他们的工作事迹。
+- **用户互动**：访客可以查看、点赞或评论。
 
-### Customize configuration
-See [Configuration Reference](https://vitejs.dev/guide/).
+### 5. 未保办服务预约
+- **功能**：提供求助、儿童之家服务预约、捐赠对接等服务的预约功能。
+- **细分页面**：根据服务类型分为多个子页面或模块。
 
-## Support notes
-We are shipping our templates with a very basic React configuration to let you quickly get into the development process, but we don't discourage you from using any other configuration or framework built on the top of React. So, please note that any request dealing with React (e.g. extra features, customisations, et cetera) is to be considered out of the support scope.
+### 6. 未保档案
+- **功能**：存储社工走访日志、未成年人信息登记。
+- **权限管理**：确保只有授权的社工、政府管理人员、监护人和学校可以访问相关信息。
 
-For more information about what support covers, please see our (FAQs)[https://cruip.com/faq/].
+### 7. 流动社工站
+- **功能**：允许监护人、社区、学校、教师在线提交申请材料，申请社工服务。
+- **用户操作**：提供表单或上传文件的方式提交申请。
+
+### 8. 云守护
+- **功能**：提供与未成年人沟通、线上陪伴、辅导等服务。
+- **用户操作**：根据需求选择服务，并可能需要填写相关信息或预约。
+
+### 9. 小信箱
+- **功能**：允许用户向社工、机构、政府、学校提出建议或问题。
+- **用户操作**：填写并提交反馈表单。
+
+### 10. 政策法规宣传
+- **功能**：提供相关政策和法规的宣传教育。
+- **用户互动**：可能包括下载政策文件、观看宣传视频等。
+
